@@ -1,0 +1,29 @@
+ai: NLP
+domain: PA
+usages: ./docs/usage.md
+metadata:
+  name: LLM for PA
+  description: >
+    A generic Large Language Model for Public Administration, based on LLama-3.1.
+  kind: component
+  ai: NLP
+  domain: PA
+  license: Apache License 2.0
+usage:
+  target_users:
+    - PA operators (municipalities, regional operators, etc.)
+  applications:
+    - interactive chatbot API for constructing chatbots
+  documentation_links:
+    - usage: ./docs/usage.md
+howto:
+  - title: Expose the LLM as a service
+    ref: ./docs/howto/expose.md
+models:
+  - id: llm-pa
+    name: Expose the classifed model as a custom API
+    kind: model
+    implementation:
+      framework: huggingface
+      spec:
+        url: hf://LanD-FBK/aixpa
